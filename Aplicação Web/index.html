@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0" />
+
+<title>DOA.ME - Painel de Hemocentros</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#1f2937;
+}
+
+header{
+
+background:
+linear-gradient(
+135deg,
+#c1121f,
+#780000
+);
+
+color:white;
+
+padding:24px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+box-shadow:
+0 4px 12px rgba(
+0,0,0,.15
+);
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+margin-left:24px;
+
+font-weight:500;
+
+}
+
+.hero{
+
+padding:80px 8%;
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+auto-fit,
+minmax(
+300px,
+1fr
+)
+);
+
+gap:50px;
+
+align-items:center;
+
+}
+
+.hero-text h1{
+
+font-size:54px;
+
+margin-bottom:24px;
+
+color:#780000;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#4b5563;
+
+margin-bottom:30px;
+
+}
+
+.btn-group{
+
+display:flex;
+
+gap:16px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:14px 24px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+.btn-primary{
+
+background:#c1121f;
+
+color:white;
+
+}
+
+.btn-secondary{
+
+border:2px solid #c1121f;
+
+color:#c1121f;
+
+}
+
+.hero-card{
+
+background:white;
+
+padding:32px;
+
+border-radius:24px;
+
+box-shadow:
+
+0 10px 30px rgba(
+0,0,0,.08
+);
+
+}
+
+.carousel-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:24px;
+
+}
+
+.carousel-btn{
+
+width:45px;
+
+height:45px;
+
+border:none;
+
+border-radius:50%;
+
+background:#c1121f;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+}
+
+.blood-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+2,
+1fr
+);
+
+gap:16px;
+
+}
+
+.blood-card{
+
+background:#f9fafb;
+
+border-radius:16px;
+
+padding:20px;
+
+text-align:center;
+
+border-left:
+
+6px solid #c1121f;
+
+}
+
+.blood-card h3{
+
+font-size:28px;
+
+color:#780000;
+
+margin-bottom:8px;
+
+}
+
+.blood-card span{
+
+color:#6b7280;
+
+}
+
+.features{
+
+padding:60px 8%;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+font-size:40px;
+
+color:#780000;
+
+margin-bottom:12px;
+
+}
+
+.section-title p{
+
+color:#6b7280;
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.6;
+
+}
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+auto-fit,
+minmax(
+260px,
+1fr
+)
+);
+
+gap:24px;
+
+}
+
+.feature-card{
+
+background:white;
+
+padding:28px;
+
+border-radius:20px;
+
+box-shadow:
+
+0 5px 20px rgba(
+0,0,0,.06
+);
+
+}
+
+.feature-card h3{
+
+margin-bottom:14px;
+
+color:#780000;
+
+}
+
+.feature-card p{
+
+color:#6b7280;
+
+line-height:1.6;
+
+}
+
+footer{
+
+margin-top:80px;
+
+background:#780000;
+
+color:white;
+
+text-align:center;
+
+padding:24px;
+
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+
+font-size:40px;
+
+}
+
+header{
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+DOA.ME - HEMOCENTROS
+
+</div>
+
+<nav>
+
+<a
+href="https://www.google.com/maps/search/hemocentros/"
+target="_blank">
+
+Hemocentros Perto de Você
+
+</a>
+
+<a href="publico.html">
+
+Estoques
+
+</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+Conectando doadores e hemocentros em tempo real.
+
+</h1>
+
+<p>
+
+O DOA.ME centraliza os estoques de sangue dos hemocentros.
+
+</p>
+
+<div class="btn-group">
+
+<a
+href="login.html"
+class="btn btn-primary">
+
+Cadastrar Bolsas
+
+</a>
+
+
+<a
+href="cadastro.html"
+class="btn btn-secondary">
+
+Cadastrar Hemocentro
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="carousel-header">
+
+<button
+class="carousel-btn"
+onclick="voltarSlide()">
+
+←
+
+</button>
+
+
+<h2 id="cidadeTitulo">
+
+Carregando...
+
+</h2>
+
+
+<button
+class="carousel-btn"
+onclick="proximoSlide()">
+
+→
+
+</button>
+
+</div>
+
+
+<div
+class="blood-grid"
+id="bloodGrid">
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="features">
+
+<div class="section-title">
+
+<h2>
+
+Funcionalidades do Sistema
+
+</h2>
+
+<p>
+
+Dados sincronizados em tempo real.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<h3>
+
+Atualização de Estoque
+
+</h3>
+
+<p>
+
+Hemocentros atualizam rapidamente.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>
+
+Tempo Real
+
+</h3>
+
+<p>
+
+Firebase sincroniza automaticamente.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>
+
+Alertas
+
+</h3>
+
+<p>
+
+Notificações inteligentes.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>
+
+Regionalização
+
+</h3>
+
+<p>
+
+Exibição por cidade.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+
+DOA.ME © 2026
+
+</p>
+
+</footer>
+
+
+<script
+type="module"
+src="js/index.js">
+
+</script>
+
+</body>
+
+</html>
